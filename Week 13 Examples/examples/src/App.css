@@ -1,0 +1,13 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 100px auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+}
