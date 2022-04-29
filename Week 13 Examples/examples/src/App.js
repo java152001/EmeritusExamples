@@ -15,7 +15,7 @@ function App() {
     // Example 2
     // return (
     //     <>
-    //         <ControlledInputs />
+    //         <ControlledInputs city="Tucson" />
     //     </>
     // )
 

@@ -1,10 +1,13 @@
 import React, {useState} from 'react';
 
-const ControlledInput = () => {
+const ControlledInput = (props) => {
     const [name, setName] = useState("");
 
+    console.log(props);
+
     const updateName = newName => {
-        setName(newName);
+        console.log(newName)
+        setName(newName.target.value);
     }
 
     const handleSubmit = e => {
@@ -13,18 +16,18 @@ const ControlledInput = () => {
     }
 
     return (
-        <>
+        <div>
             <form onSubmit = {handleSubmit}>
                 <label>Name: </label>
                 <input 
                     type = "text" 
                     value = {name}
-                    onChange = { e => updateName(e.target.value) } 
+                    onChange = { e => updateName(e) } 
                 />
                 <button>Submit</button>
-                <p>My name is {name}</p>
+                <p>My name is {name} from the city of {props.city}</p>
             </form>
-        </>
+        </div>
     )
 }
 

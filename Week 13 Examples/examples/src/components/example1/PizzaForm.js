@@ -34,6 +34,7 @@ const PizzaForm = () => {
                     <option>small</option>
                     <option>medium</option>
                     <option>large</option>
+                    <option>X-large</option>
                 </select>
                 <div>Pepperoni</div>
                 <input type="checkbox" id="pepp" />
