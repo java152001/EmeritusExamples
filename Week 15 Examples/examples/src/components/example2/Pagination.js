@@ -14,10 +14,9 @@ const Pagination = ({ items, pageSize, onPageChange }) => {
           .map((item, i) => start + i);
       };
 
-
     let numPages = Math.ceil(items.length / pageSize);
 
-    let pages = range(1, numPages + 1);
+    let pages = range(1, numPages + 1 );
 
     const list = pages.map(page => {
         return (

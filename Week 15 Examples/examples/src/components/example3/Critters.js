@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-let catFactURL = "https://catfact.ninja/fact"
-let doggoImageURL = "https://dog.ceo/api/breeds/image/random"
+let catFactURL = "https://catfact.ninja/fact";
+let doggoImageURL = "https://dog.ceo/api/breeds/image/random";
 
 const Critters = () => {
 
@@ -25,11 +25,12 @@ const Critters = () => {
     return (
         <>
             { 
-                Object.keys(critterData).length === 0 ?
+                Object.keys(critterData).length === 0 
+                    ?
                     <h2>Critters Loading</h2>
                     :
                     <>
-                    <h2>Critters Loaded!</h2>
+                        <h2>Critters Loaded!</h2>
                         <img src={critterData.pupperData}></img>
                         <p>Cat Fact: {critterData.cattoData}</p>
                     </>

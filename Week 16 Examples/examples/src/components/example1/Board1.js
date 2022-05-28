@@ -12,6 +12,7 @@ export default function Board() {
     setPlayer((player + 1) % 2); // get next player
     return player;
   };
+  
   function renderSquare(i) {
     // use properties to pass callback function takeTurn to Child
     return <Square takeTurn={takeTurn} id={i}></Square>;

@@ -15,7 +15,6 @@ const Account = () => {
 
         if (event.target.value <= 0) {
             setValidTransaction(false);
-            console.log('triggered');
             return;
         }
 
@@ -53,8 +52,9 @@ const Account = () => {
                 <option id="deposit-selection" value="Deposit">Deposit</option>
                 <option id="cashback-selection" value="Cash Back">Cash Back</option>
             </select>
-            {(atmMode === "Deposit" || atmMode === "Cash Back") &&
-                <ATMDeposit onChange={handleChange} isDeposit={isDeposit} isValid={validTransaction}></ATMDeposit>
+            {
+                (atmMode === "Deposit" || atmMode === "Cash Back") &&
+                    <ATMDeposit onChange={handleChange} isDeposit={isDeposit} isValid={validTransaction}></ATMDeposit>
             }
         </form>
     );

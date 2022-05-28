@@ -25,6 +25,7 @@ export default function Board() {
         // get array of box id's
         // can't be a winner in less than 5 turns
         if (gameState.length < 5) return 'No Winner Yet';
+        if (gameState.length === 9) return 'Cats Game';
         let p0 = gameState.filter((item) => {
           if (item.player == 0) return item;
         });
@@ -56,7 +57,7 @@ export default function Board() {
       }
 
 
-      // 1st player is X ie 1
+  // 1st player is X ie 1
   // State keeps track of next player and gameState
   const [player, setPlayer] = useState(1);
   const [gameState, setGameState] = useState([]);
@@ -64,7 +65,7 @@ export default function Board() {
 
   // Part 1 step 1 code goes here
   // Use conditional logic to set a variable to either 'Player O' or  'Player X'
-  let nextPlayer = (player === 1) ? 'Player X': 'Player O';
+  let nextPlayer = (player === 1) ? 'Player X' : 'Player O';
 
   console.log(`We have a winner ${status}`);
 
