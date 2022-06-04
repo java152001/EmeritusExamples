@@ -48,32 +48,6 @@
 // console.log(superMegaSplitter(stringExample, ' '));
 // console.log(superMegaSplitter(stringExample, 'e'));
 
-// const peopleData = [
-//     {
-//         name: 'Anthony',
-//         email: 'java152001@gmail.com',
-//         id: 1
-//     },
-//     {
-//         name: 'Anna',
-//         email: 'Anna@gmail.com',
-//         id: 2
-//     },
-//     {
-//         name: 'Forrest',
-//         email: 'Forrest@gmail.com',
-//         id: 3
-//     }
-// ];
-
-// const phoneNumbers = [1234567890, 2145869391, 847689312];
-
-// for (let i = 0; i < peopleData.length; i++) {
-//     peopleData[i].phoneNumber = phoneNumbers[i];
-// }
-
-// console.log(peopleData);
-
 
 /*** Example 4 ArraySorting and Display ***/
 
@@ -126,60 +100,58 @@ renderPosts(boston, document.getElementById('area'));
 
 
 
-function renderPosts(boston, container) {
-    const people = boston.data;
-    const len = boston.data.length;
-    let html = '';
-    for (let i = 0; i < len; i++) {
-      html +=
-        '<li class="post">' + '<h2>' + people[i][8] + '</h2>' + '<h3>' + people[i][11] + '</h3>';
-    }
-    container.innerHTML = '<ul id = "data">' + html + '</ul>';
+// function renderPosts(boston, container) {
+//     const people = boston.data;
+//     const len = boston.data.length;
+//     let html = '';
+//     for (let i = 0; i < len; i++) {
+//       html +=
+//         '<li class="post">' + '<h2>' + people[i][8] + '</h2>' + '<h3>' + people[i][11] + '</h3>';
+//     }
+//     container.innerHTML = '<ul id = "data">' + html + '</ul>';
   
-    // TODO: add code to display the html variable inside a ul element with id="data"
-    // Hint: you can use the container parameter's innerHTML property to insert Html tags
-  }
-  function renderTopSalaries(boston, container) {
-    // Step 1 solution
-    var people = boston.data;
-    var topSalaries = people.sort((a, b) => b[11] - a[11]).slice(0, 5);
-    const len = topSalaries.length;
-    var html = '';
-    for (let i = 0; i < len; i++) {
-      html +=
-        '<li class="top">' +
-        '<h2>' +
-        topSalaries[i][8] +
-        '</h2>' +
-        '<h3>' +
-        topSalaries[i][11] +
-        '</h3>';
-    }
+//     // TODO: add code to display the html variable inside a ul element with id="data"
+//     // Hint: you can use the container parameter's innerHTML property to insert Html tags
+//   }
+//   function renderTopSalaries(boston, container) {
+//     // Step 1 solution
+//     var people = boston.data;
+//     var topSalaries = people.sort((a, b) => b[11] - a[11]).slice(0, 5);
+//     const len = topSalaries.length;
+//     var html = '';
+//     for (let i = 0; i < len; i++) {
+//       html +=
+//         '<li class="top">' +
+//         '<h2>' +
+//         topSalaries[i][8] +
+//         '</h2>' +
+//         '<h3>' +
+//         topSalaries[i][11] +
+//         '</h3>';
+//     }
   
-    container.innerHTML = '<ul id = "topSalaries">' + html + '</ul>';
-  }
-  function renderTopEmployees(boston, container) {
-    //step 2 solution
-    var people = boston.data;
-    var topEmployees = people.filter((a) => a[11] > 200000);
-    const len = topEmployees.length;
-    var html = '';
-    for (let i = 0; i < len; i++) {
-      html +=
-        '<li class="top">' +
-        '<h2>' +
-        topEmployees[i][8] +
-        '</h2>' +
-        '<h3>' +
-        topEmployees[i][11] +
-        '</h3>';
-    }
+//     container.innerHTML = '<ul id = "topSalaries">' + html + '</ul>';
+//   }
+  // function renderTopEmployees(boston, container) {
+  //   //step 2 solution
+  //   var people = boston.data;
+  //   var topEmployees = people.filter((a) => a[11] > 200000);
+  //   const len = topEmployees.length;
+  //   var html = '';
+  //   for (let i = 0; i < len; i++) {
+  //     html +=
+  //       '<li class="top">' +
+  //       '<h2>' +
+  //       topEmployees[i][8] +
+  //       '</h2>' +
+  //       '<h3>' +
+  //       topEmployees[i][11] +
+  //       '</h3>';
+  //   }
   
-    container.innerHTML += '<ul id = "topEmployees">' + html + '</ul>';
-  }
+  //   container.innerHTML += '<ul id = "topEmployees">' + html + '</ul>';
+  // }
   
   //renderPosts(boston, document.getElementById('container'));
   //renderTopSalaries(boston, document.getElementById('container'));
-  renderTopEmployees(boston, document.getElementById('container'));
-
-  // elm = driver.find_element_by_xpath("//*[text()='McDonough,John P']")
+  // renderTopEmployees(boston, document.getElementById('container'));

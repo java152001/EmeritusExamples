@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Movie from './components/example1/Movie';
 import movies from './movies.json';
 
@@ -7,7 +7,6 @@ function App() {
 
     const [data, setData] = useState(movies);
     const [loaded, setLoaded] = useState(true);
-
 
     console.log('loaded:', loaded, 'data:', data);
 
@@ -18,7 +17,7 @@ function App() {
                 {loaded &&
                     data.movies.map((movie, i) => (
 
-                    // Old
+                    //Old
                     // <nexttech-movie
                     // // Do NOT remove this key attribute
                     // key={i}
