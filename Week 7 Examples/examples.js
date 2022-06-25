@@ -8,6 +8,7 @@
 //   // why do we have access to this property?
 //   // what does it return by default and what did we change it too below?
 //   // lastly, are there many other ways we could do this?
+
 //   return domEle.offsetWidth + ' px';
 // }
 
@@ -19,7 +20,6 @@
 /*** Example 2 DOM input and insertion ***/
 
 // function addTodo() {
-
 //   // what is this line doing?
 //   let todoName = document.getElementById('todoName').value;
 
@@ -30,7 +30,6 @@
 //   let todoList = document.getElementById('todoList');
 
 //   todoList.appendChild(newItem);
-
 // }
 
 // // Event Listeners are another way we can make our browser listen for things and execute code when they happen
@@ -43,6 +42,7 @@
 // fetch('https://random.dog/woof.json')
 //   .then(response => response.json())
 //   .then(data => {
+//     console.log(data);
 //     const parent = document.getElementById('pupperDiv');
 //     let pupperImg = document.createElement('img');
 //     pupperImg.src = data.url;
@@ -143,4 +143,5 @@
 
 // function makeOne() {
 //   pacMen.push(makePac()); // add a new PacMan
+//   console.log(pacMen);
 // }
