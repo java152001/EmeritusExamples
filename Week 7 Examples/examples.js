@@ -60,87 +60,87 @@
 //   ['./images/PacMan3.png', './images/PacMan4.png'],
 // ];
 // let direction = 0;
-const pacMen = []; // This array holds all the pacmen
+// const pacMen = []; // This array holds all the pacmen
 
-// This function returns an object with random values
-function setToRandom(scale) {
-  return {
-    x: Math.random() * scale,
-    y: Math.random() * scale,
-  };
-}
+// // This function returns an object with random values
+// function setToRandom(scale) {
+//   return {
+//     x: Math.random() * scale,
+//     y: Math.random() * scale,
+//   };
+// }
 
-function makePac() {
-  // returns an object with random values scaled {x: 33, y: 21}
-  let velocity = setToRandom(10); // {x:?, y:?}
-  let position = setToRandom(200);
-  // why are these needed;
-  let reverseX = false;
-  let reverseY = false;
+// function makePac() {
+//   // returns an object with random values scaled {x: 33, y: 21}
+//   let velocity = setToRandom(10); // {x:?, y:?}
+//   let position = setToRandom(200);
+//   // why are these needed;
+//   let reverseX = false;
+//   let reverseY = false;
 
-  // Add image to div id = game
-  let game = document.getElementById('game');
-  let newimg = document.createElement('img');
-  newimg.style.position = 'absolute';
-  newimg.src = './PacMan1.png';
-  newimg.width = 100;
+//   // Add image to div id = game
+//   let game = document.getElementById('game');
+//   let newimg = document.createElement('img');
+//   newimg.style.position = 'absolute';
+//   newimg.src = './PacMan1.png';
+//   newimg.width = 100;
 
-  // TODO: set position here
+//   // TODO: set position here
 
-  // TODO add new Child image to game
-  game.appendChild(newimg);
+//   // TODO add new Child image to game
+//   game.appendChild(newimg);
 
-  // return details in an object
-  return {
-    position,
-    velocity,
-    newimg,
-    reverseX,
-    reverseY
-  };
-}
+//   // return details in an object
+//   return {
+//     position,
+//     velocity,
+//     newimg,
+//     reverseX,
+//     reverseY
+//   };
+// }
 
-function update() {
-  // loop over pacmen array and move each one and move image in DOM
-  pacMen.forEach((item) => {
-    checkCollisions(item);
+// function update() {
+//   // loop over pacmen array and move each one and move image in DOM
+//   pacMen.forEach((item) => {
+//     checkCollisions(item);
 
-    // need to check both planes independently
-    if (item.reverseX) {
-      item.position.x -= item.velocity.x;
-    } else {
-      item.position.x += item.velocity.x;
-    }
+//     // need to check both planes independently
+//     if (item.reverseX) {
+//       item.position.x -= item.velocity.x;
+//     } else {
+//       item.position.x += item.velocity.x;
+//     }
 
-    if (item.reverseY) {
-      item.position.y -= item.velocity.y;
-    } else {
-      item.position.y += item.velocity.y;
-    }
+//     if (item.reverseY) {
+//       item.position.y -= item.velocity.y;
+//     } else {
+//       item.position.y += item.velocity.y;
+//     }
 
-    item.newimg.style.left = item.position.x + 'px';
-    item.newimg.style.top = item.position.y + 'px';
-  });
-  setTimeout(update, 20);
-}
+//     item.newimg.style.left = item.position.x + 'px';
+//     item.newimg.style.top = item.position.y + 'px';
+//   });
+//   setTimeout(update, 20);
+// }
 
-function checkCollisions(item) {
-  // How can we use JS to get the actual bound of the container?
-  let rightBound = window.innerWidth - item.newimg.width;
-  let leftBound = 0;
-  let topBound = 0;
-  let bottomBound = window.innerHeight - item.newimg.height;
-  // TODO: detect collision with all walls and make pacman bounce
+// function checkCollisions(item) {
+//   // How can we use JS to get the actual bound of the container?
+//   let rightBound = window.innerWidth - item.newimg.width;
+//   let leftBound = 0;
+//   let topBound = 0;
+//   let bottomBound = window.innerHeight - item.newimg.height;
+//   // TODO: detect collision with all walls and make pacman bounce
 
-  if (item.position.x >= rightBound || item.position.x <= leftBound) {
-    item.reverseX = !item.reverseX;
-  }
+//   if (item.position.x >= rightBound || item.position.x <= leftBound) {
+//     item.reverseX = !item.reverseX;
+//   }
 
-  if (item.position.y >= bottomBound || item.position.y <= topBound) {
-    item.reverseY = !item.reverseY;
-  }
-}
+//   if (item.position.y >= bottomBound || item.position.y <= topBound) {
+//     item.reverseY = !item.reverseY;
+//   }
+// }
 
-function makeOne() {
-  pacMen.push(makePac()); // add a new PacMan
-}
+// function makeOne() {
+//   pacMen.push(makePac()); // add a new PacMan
+// }
