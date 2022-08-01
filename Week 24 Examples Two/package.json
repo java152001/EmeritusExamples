@@ -1,0 +1,19 @@
+{
+  "name": "week-24-examples-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "authindex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.8.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
