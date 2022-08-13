@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-require('env');
 
 const app = express();
 
-const accessTokenSecret = PROCESS.env.tokenSecret;
+const accessTokenSecret = 'somerandomaccesstoken';
 const refreshTokenSecret = 'somerandomstringforrefreshtoken';
 
 const users = [

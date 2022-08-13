@@ -5,7 +5,7 @@ var express = require("express");
 // Construct a schema, using GraphQL schema language
 var restaurants = [
   {
-    id: 1,
+    id: 0,
     name: "WoodsHill ",
     description:
       "American cuisine, farm to table, with fresh produce every day",
@@ -21,7 +21,7 @@ var restaurants = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     name: "Fiorellas",
     description:
       "Italian-American home cooked food with fresh pasta and sauces",
@@ -41,7 +41,7 @@ var restaurants = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     name: "Karma",
     description:
       "Malaysian-Chinese-Japanese fusion, with great bar and bartenders",
@@ -95,7 +95,7 @@ var root = {
   restaurant: (arg) => restaurants[arg.id],
   restaurants: () => restaurants,
   setrestaurant: ({ input }) => {
-    restaurants.push({ name: input.name, description: input.description });
+    restaurants.push({ id: (restaurants.length), name: input.name, description: input.description });
     return input;
   },
   deleterestaurant: ({ id }) => {

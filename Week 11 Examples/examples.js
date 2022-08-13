@@ -1,32 +1,32 @@
 /*** Example 1 Array & Object Destructuring ***/
 
-const books = ["fiction", ["horror", "literary"], "science"];
+// const books = ["fiction", ["horror", "literary"], "science"];
 
-var [fiction, [horror, literary], science] = books;
+// var [fiction, [horror, literary], science] = books;
 
-console.log(fiction);
-console.log(horror);
-console.log(literary);
-console.log(science);
+// console.log(fiction);
+// console.log(horror);
+// console.log(literary);
+// console.log(science);
 
-const Student = {
-  firstName: "Joe",
-  university: "MIT",
-  studentInfo: {
-    studentid: 555,
-  },
-};
+// const Student = {
+//   firstName: "Joe",
+//   university: "MIT",
+//   studentInfo: {
+//     studentid: 555,
+//   },
+// };
 
-var { firstName, university, studentInfo: { studentid} } = Student;
+// var { studentInfo: { studentid } } = Student;
 // var { studentid }  = Student.studentInfo; 
 
-console.log(firstName);
-console.log(university);
-console.log(studentid);
+// console.log(firstName);
+// console.log(university);
+// console.log(studentid);
 
 /*** Example 2 Spread and Rest Operators ***/
 
-// // Spreading array example
+// Spreading array example
 
 // const terrestrials = ["fox", "lion", "elephant"];
 // const aquatics = ["shark", "whale", "octopus"];
@@ -71,7 +71,6 @@ console.log(studentid);
 //         return {
 //             "getBookTitle": function () {
 //                 return bookName;
-
 //             },
 //             "turnPage": function () {
 //                 currentPageNumber++;
