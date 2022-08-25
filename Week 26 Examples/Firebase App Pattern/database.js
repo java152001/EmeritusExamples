@@ -10,7 +10,8 @@
 		storageBucket: "testerino2-25bc4.appspot.com",
 		messagingSenderId: "807891951949",
 		appId: "1:807891951949:web:b87bad7bb533d8db545704"
-	  };
+	};
+	
 	// Initialize Firebase
 	firebase.initializeApp(firebaseConfig);
 

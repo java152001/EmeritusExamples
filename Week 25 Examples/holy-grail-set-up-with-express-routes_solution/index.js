@@ -9,7 +9,7 @@ app.use(express.static("public"));
 client.connect();
 
 client.on('connect', () => {
-  
+
 // init values
   client
   .multi()
@@ -29,7 +29,7 @@ client
   .get('footer')
   .exec()
   .then(item => {
-      console.log(item);
+      console.log('initial items: ', item);
   })
 })
 
@@ -44,8 +44,6 @@ function data() {
       .get('footer')
       .exec()
       .then((value) => {
-
-        console.log(value);
 
         const data = {
           header: Number(value[0]),

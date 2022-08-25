@@ -100,11 +100,7 @@ app.get('/pokemon', function(req, res) {
 app.post('/pokemon', function(req, res) {
     const pokemon = req.body;
 
-    console.log(pokemon);
-
     allPokemon.push(pokemon);
-
-    console.log(allPokemon);
 
     res.send('Pokemon Added!');
 })
