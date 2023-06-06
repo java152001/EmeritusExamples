@@ -19,10 +19,6 @@ app.use(bodyParser.json());
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-app.use('/documentation', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
-
-
-
 const allPokemon = [
     {
         name: 'Bulbasaur',
@@ -52,6 +48,8 @@ const allPokemon = [
  *          responses:
  *              200:
  *                  description: Great Success
+ *              404: 
+ *                  description: Great Failure
  */
 app.get('/pokemon', function(req, res) {
     res.send(allPokemon);
@@ -99,15 +97,12 @@ app.get('/pokemon', function(req, res) {
  */
 app.post('/pokemon', function(req, res) {
     const pokemon = req.body;
-
     allPokemon.push(pokemon);
 
     res.send('Pokemon Added!');
 })
 
-app.get('/', function(req, res) {
-    res.send('Hi World!');
-})
+app.use('/', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 app.listen(3000, function() {
     console.log('listening on port 3000');
