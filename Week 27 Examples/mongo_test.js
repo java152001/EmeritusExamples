@@ -1,7 +1,28 @@
 const MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 
+// const client = new MongoClient(url);
+
+// async function main() {
+//     await client.connect();
+//     console.log('Successfully Connected');
+//     return 'done'
+// }
+
+// main()
+//     .then(console.log)
+//     .catch(error => console.log(error))
+//     .finally(() => client.close());
+
+
 MongoClient.connect(url, { useUnifiedTopology: true}, function(err, client) {
+
+    if (err) {
+        console.log(err);
+
+        client.close();
+    }
+
     console.log('Connected');
 
     const dbName = 'myproject';

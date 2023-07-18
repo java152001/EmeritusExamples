@@ -61,13 +61,13 @@ function DepositForm(props){
           });
       })
 
-    fetch(`/account/update/${email}/${amount}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        props.setStatus('');      
-        props.setShow(false);
-      });
+    // fetch(`/account/update/${email}/${amount}`)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     console.log(data);
+    //     props.setStatus('');      
+    //     props.setShow(false);
+    //   });
 
   }
 
